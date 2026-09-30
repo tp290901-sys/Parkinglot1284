@@ -1,8 +1,3 @@
-.dashboard-container {
-  display: flex;
-  height: 100vh;
-  font-family: Arial, sans-serif;
-  background-color: #f4f6f9;
 }
 
 .dashboard-container .sidebar {
@@ -11,7 +6,7 @@
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between
   transition: width 0.3s;
 }
 
@@ -198,8 +193,261 @@
 }
 
 .dashboard-container.sidebar-closed .sidebar .brand h2, 
+.dashboard-container.sidebar-closed .sidebar .brand .sub-
+
+
+
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+}
+
+.dashboard-container .sidebar {
+  width: 240px;
+  background-color: #1e1e1e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: width 0.3s;
+}
+
+.dashboard-container .sidebar .brand {
+  padding: 20px;
+}
+
+.dashboard-container .sidebar .brand h2 {
+  color: #f26a36;
+  margin: 0;
+}
+
+.dashboard-container .sidebar .brand .sub-brand {
+  font-size: 10px;
+  color: #aaa;
+}
+
+.dashboard-container .sidebar .nav-links {
+  flex: 1;
+}
+
+.dashboard-container .sidebar .nav-links .nav-item {
+  display: block;
+  padding: 12px 20px;
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dashboard-container .sidebar .nav-links .nav-item:hover, 
+.dashboard-container .sidebar .nav-links .nav-item.active {
+  background-color: #f26a36;
+  color: white;
+}
+
+.dashboard-container .sidebar .sidebar-footer {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #333;
+}
+
+.dashboard-container .sidebar .sidebar-footer .collapse-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dashboard-container .main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.dashboard-container .main-content .top-header {
+  height: 60px;
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.dashboard-container .main-content .content-body {
+  padding: 20px;
+}
+
+/* Stepper Wizard Styling */
+.stepper-container {
+  display: flex;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.stepper-container .step {
+  flex: 1;
+  padding: 12px;
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+  border-bottom: 3px solid transparent;
+}
+
+.stepper-container .step.active {
+  color: #f26a36;
+  border-bottom: 3px solid #f26a36;
+  font-weight: bold;
+}
+
+.stepper-container .step .step-num {
+  margin-right: 6px;
+}
+
+/* Card Section */
+.card-section {
+  background: white;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.card-section h3 {
+  font-size: 16px;
+  margin: 0 0 5px 0;
+  color: #333;
+}
+
+.section-desc {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.sub-heading {
+  font-size: 14px;
+  color: #333;
+  margin: 20px 0 10px 0;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+/* Form Layout Elements */
+.form-row {
+  margin-bottom: 15px;
+}
+
+.select-train-group {
+  max-width: 300px;
+}
+
+.filters-row {
+  display: flex;
+  gap: 15px;
+  align-items: flex-end;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.form-group label {
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 13px;
+  background: white;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 14px;
+  font-size: 13px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+.btn-secondary {
+  background: #fff;
+  color: #333;
+}
+
+.btn-primary {
+  background: #f26a36;
+  color: white;
+  border-color: #f26a36;
+}
+
+/* Table Section Styling */
+.table-card {
+  padding: 15px;
+}
+
+.table-header-info {
+  font-size: 12px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 12px;
+}
+
+.data-table th, .data-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.data-table th {
+  background: #fafafa;
+  color: #555;
+  font-weight: bold;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.dashboard-container.sidebar-closed .sidebar {
+  width: 60px;
+}
+
+.dashboard-container.sidebar-closed .sidebar .brand h2, 
 .dashboard-container.sidebar-closed .sidebar .brand .sub-brand, 
 .dashboard-container.sidebar-closed .sidebar .nav-item, 
 .dashboard-container.sidebar-closed .sidebar .company-logo {
   display: none;
+}
+
 }
