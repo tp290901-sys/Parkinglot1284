@@ -1,0 +1,83 @@
+<div class="dashboard-container" [class.sidebar-closed]="!sidebarOpen">
+  
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <div class="brand">
+      <h2>TLO</h2>
+      <span class="sub-brand">Train Load Optimization</span>
+    </div>
+    
+    <nav class="nav-links">
+      <a class="nav-item active">📁 Dashboard</a>
+      <a class="nav-item">📋 Rules</a>
+      <a class="nav-item">📊 Planning</a>
+      <a class="nav-item">💾 Saved Plans</a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <span class="company-logo">PwC</span>
+      <button class="collapse-btn" (click)="toggleSidebar()">«</button>
+    </div>
+  </aside>
+
+  <!-- Main Content Layout -->
+  <main class="main-content">
+    <header class="top-header">
+      <div class="page-title">TLO Dashboard</div>
+      <div class="user-profile">👤 Super Admin User</div>
+    </header>
+
+    <div class="content-body">
+      <!-- Quick Links -->
+      <section class="quick-links-section">
+        <h3>Quick Links</h3>
+        <div class="quick-links-grid">
+          <div class="quick-card">
+            <div>
+              <h4>Create Plan</h4>
+              <p>Create a new optimization plan for your yard</p>
+            </div>
+            <span>›</span>
+          </div>
+          <div class="quick-card">
+            <div>
+              <h4>Edit Rules</h4>
+              <p>View and manage optimization rules and constraints</p>
+            </div>
+            <span>›</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Metric Cards -->
+      <section class="metrics-section">
+        <div class="metric-card" *ngFor="let metric of metrics">
+          <div class="metric-title">{{ metric.title }}</div>
+          <div class="metric-value">{{ metric.value }}</div>
+          <div class="metric-subtitle">{{ metric.subtitle }}</div>
+          <div class="bottom-bar"></div>
+        </div>
+      </section>
+
+      <!-- Data Table -->
+      <section class="table-section">
+        <h3>Containers by Destination & Car Kind</h3>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th *ngFor="let header of tableHeaders">{{ header }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let row of tableRows">
+                <td class="dest-cell">{{ row.destination }}</td>
+                <td *ngFor="let val of row.values">{{ val }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
